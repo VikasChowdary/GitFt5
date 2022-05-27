@@ -1,0 +1,24 @@
+connector:
+  name: Ft5
+  identifier: Ft5
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt5
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt5
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: VikasChowdary
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
